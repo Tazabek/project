@@ -1,0 +1,83 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{%include 'base/page_head.html'%}
+
+			<section class="s-pt-30 s-pt-lg-50 ls about">
+				<div class="divider-60 d-none d-xl-block"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 offset-md-2">
+							<div class="main-content text-center">
+								<h5>
+									{{about.quote}}
+								</h5>
+								<i class="rt-icon2-user"></i>
+								<p>
+									{{user.username}}
+									<span class="link-a">
+										<a href="#">CEO</a>
+									</span>
+								</p>
+
+								<div class="divider-10 d-none d-xl-block"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="s-pt-0  s-pb-30 s-pt-lg-30 s-pb-lg-75 ls about-icon teaser-contact-icon">
+				<div class="divider-10 d-none d-xl-block"></div>
+				<div class="container">
+					<div class="row c-mt-50 c-mt-lg-0">
+						<div class="col-lg-4 text-center call-icon">
+							<div class="border-icon">
+								<div class="teaser-icon">
+									<img src="images/icon1_about.png" alt="">
+								</div>
+							</div>
+							<h6>
+								{{about.theme1}}
+							</h6>
+							<div class="icon-content">
+								<p>
+									{{about.text1}}
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 text-center write-icon">
+							<div class="divider-30 d-none d-xl-block"></div>
+							<div class="border-icon">
+								<div class="teaser-icon">
+									<img src="images/icon2_about.png" alt="">
+								</div>
+							</div>
+							<div class="icon-content">
+								<h6>
+									{{about.theme2}}
+								</h6>
+								<p>
+									{{about.text2}}
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 text-center visit-icon">
+							<div class="border-icon">
+								<div class="teaser-icon">
+									<img src="images/icon3_about.png" alt="">
+								</div>
+							</div>
+							<div class="icon-content">
+								<h6>
+									{{about.theme3}}
+								</h6>
+								<p>
+									{{about.text3}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+{%include 'base/footer.html'%}
+{%endblock content %}

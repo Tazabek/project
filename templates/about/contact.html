@@ -1,0 +1,204 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{%include 'base/page_head.html'%}
+			<section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1>Контакты</h1>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="./">Главная</a>
+								</li>
+								<li class="breadcrumb-item active">
+									Контакты
+								</li>
+							</ol>
+							<div class="divider-15 d-none d-xl-block"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="s-pt-50">
+				<div class="divider-60 d-none d-xl-block"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="ls ms pae_map" data-draggable="false" data-scrollwheel="false">
+								<div class="maker">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46788.35593528694!2d74.6061824!3d42.867097599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7dcbdacf87b%3A0xfc7d686ab988f348!2z0J_Qu9C-0YnQsNC00Ywg0JDQu9CwLdCi0L7QviDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1677713741792!5m2!1sru!2skg" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+								<!-- .marker -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ls s-pt-30 s-pt-lg-75 s-pb-130 contact4">
+				<div class="container">
+					<div class="row c-gutter-60">
+
+						<div class="divider-40 d-none d-xl-block"></div>
+
+						<div class="col-lg-8">
+							<form class="contact-form c-mb-20 c-gutter-15" method="post" action="/">
+
+								<div class="row">
+
+									<div class="col-sm-12">
+										<h4>Contact Form</h4>
+									</div>
+								</div>
+
+								<div class="row">
+
+									<div class="col-sm-12">
+										<div class="form-group has-placeholder">
+											<label for="name">Full Name
+												<span class="required">*</span>
+											</label>
+											<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group has-placeholder">
+											<label for="phone">Phone
+												<span class="required">*</span>
+											</label>
+											<input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone Number">
+										</div>
+									</div>
+
+								</div>
+
+								<div class="row">
+
+									<div class="col-sm-12">
+										<div class="form-group has-placeholder">
+											<label for="email">Email address
+												<span class="required">*</span>
+											</label>
+											<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Address">
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+
+									<div class="col-sm-12">
+
+										<div class="form-group has-placeholder">
+											<label for="message">Message</label>
+											<textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="row">
+									<div class="form-group has-placeholder">
+										<button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor btn-block">Send Message
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!--.col-* -->
+						<div class="col-lg-4">
+							<div>
+								<h4 class="header">
+									Контакты
+								</h4>
+
+								<div class="media mb-10">
+									<div class="icon-styled color-main fs-16">
+										<i class="fa fa-map-marker"></i>
+									</div>
+
+									<div class="media-body">
+										<p>
+											{{contacts.adress}}
+										</p>
+									</div>
+								</div>
+
+								<div class="media mb-10">
+									<div class="icon-styled color-main fs-16">
+										<i class="fa fa-phone"></i>
+									</div>
+
+									<div class="media-body">
+										<p>
+											{{contacts.tel_nums_support}}
+										</p>
+									</div>
+								</div>
+
+								<div class="media mb-40">
+									<div class="icon-styled color-main fs-16">
+										<i class="fa fa-pencil"></i>
+									</div>
+
+									<div class="media-body">
+										<p class="color-dark">
+											<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1672796275647377627f607356736e777b667a733875797b">{{contacts.first_email}}</a>
+										</p>
+									</div>
+								</div>
+
+								<h4>Open Hours</h4>
+
+
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<div class="icon-styled color-main fs-16">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												Weekdays
+											</td>
+											<td class="color-dark">9:00-17:00</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="icon-styled color-main fs-16">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												Saturday
+											</td>
+											<td class="color-dark">10:00-15:00</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="icon-styled color-main fs-16">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												Sunday
+											</td>
+											<td class="color-dark">Closed</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="icon-styled color-main fs-16">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												Holidays
+											</td>
+											<td class="color-dark">10:00-13:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--.col-* -->
+						<div class="divider-60 d-none d-xl-block"></div>
+					</div>
+				</div>
+			</section>
+
+{%include 'base/footer.html'%}
+{%endblock content %}

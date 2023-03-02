@@ -1,0 +1,115 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+		{% include 'base/page_head.html' %}
+			<section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1>Single Service 1</h1>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="./">Home</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="#">Pages</a>
+								</li>
+								<li class="breadcrumb-item active">
+									Single Service 1
+								</li>
+							</ol>
+							<div class="divider-15 d-none d-xl-block"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="ls s-pt-30 s-pb-50 s-pt-lg-50 s-pb-lg-100 c-mb-50 service-item4">
+				<div class="d-none d-lg-block divider-65"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 c-gutter-50 service-widget">
+
+							<h6>Другие услуги</h6>
+
+							<ul class="list">
+								{%for servs in other_servs %}
+								<li>
+									<a href="services1.html">{{servs.name}}</a>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="col-md-8 ">
+							<img src="{{serv1.image.url}}" alt="">
+							<div class="icon-box hero-bg single">
+								<p class="excerpt">
+									{{serv1.text_theme}}
+								</p>
+								
+								<p>	 
+									{{serv1.text}}
+								</p>
+								
+								<div class="row c-gutter-60 c-mb-20 c-mb-lg-40">
+									<div class="col-md-12 col-lg-6 left-part">
+										<div class="progress-service">
+											<h6>Наш опыт</h6>
+                                            {%for servs in other_servs%}
+											<p class="progress-title">{{servs.experience}}</p>
+											<div class="progress">
+												<div class="progress-bar bg-maincolor" role="progressbar" data-transitiongoal="{{servs.percent}}" aria-valuemin="0" aria-valuemax="100">
+													<span class="float-right">{{servs.percent}}%</span>
+												</div>
+											</div>
+											{%endfor%}
+
+										</div>
+
+									</div>
+
+									<div class="col-md-12 col-lg-6 list-comtent">
+										<h6>Наши преимушества</h6>
+										<ul class="list1">
+											{%for servs in other_servs%}
+											<li>
+												{{servs.advantages}}
+											</li>
+											{%endfor%}
+										</ul>
+									</div>
+								</div>
+								<!-- .row -->
+
+							</div>
+							
+							<div class="row c-mb-0 c-mt-30 c-mt-lg-0 c-gutter-60">
+								{%for comms in comments%}
+								<div class="media testimonials-item col-md-12 col-lg-6">
+									<img src="{{comms.image.url}}" alt="">
+									<div class="right-part">
+										<p>
+											{{comms.text}}
+										</p>
+										<h6>
+											{{comms.name}}
+										</h6>
+										<span>
+											{{comms.proffession}}
+										</span>
+									</div>
+								</div>
+								{%endfor%}
+							</div>
+							<div class="d-none d-lg-block divider-25"></div>
+							
+						</div>
+						<!-- .col-* -->
+					</div>
+				</div>
+				<div class="d-none d-lg-block divider-50"></div>
+			</section>
+		{%include 'base/footer.html'%}
+
+{% endblock content %}

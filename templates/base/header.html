@@ -1,0 +1,105 @@
+
+{% load static %}
+<div class="header_absolute s-pb-30">
+    <div class="page_header_wrapper ds affix-top-wrapper" style="height: 60px;"><header class="page_header ds affix-top">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-3 col-11">
+                    <a href="./" class="logo text-center">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-xl-8 col-lg-6 col-1 text-sm-center">
+                    <!-- main nav start -->
+                    <nav class="top-nav" style="">
+                        <ul class="nav sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+
+
+                            <li class="active">
+                                <a href="{%url 'homepage'%}" class="sf-with-ul">Главная</a><span class="sf-menu-item-mobile-toggler"></span>  
+                            </li>
+                            <li>
+                                <a href="{%url 'about' %}">О нас</a>
+                            </li>
+                            <li>
+                                <a href="services1.html" class="sf-with-ul">Услуги</a><span class="sf-menu-item-mobile-toggler"></span>
+                                <ul style="display: none; margin-top: 5px;">
+                                    <li>
+                                        <a href="{%url 'service1' %}">Services 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="{%url 'service2' %}">Services 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="{%url 'service3' %}">Services 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="{%url 'service4' %}">Services 4</a>
+                                    </li>
+                                    <li>
+                                        <a href="{%url 'service5' %}">Services 5</a>
+                                    </li>
+                                    <li>
+                                        <a href="{%url 'single_serv1'%}" class="sf-with-ul">Single Service</a><span class="sf-menu-item-mobile-toggler"></span>
+                                        <ul style="display: none; margin-top: 5px;">
+                                            <li>
+                                                <a href="{%url 'single_serv1'%}">Single Service 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="{%url 'single_serv2'%}">Single Service 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single3.html">Single Service 3</a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single4.html">Single Service 4</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- blog -->
+
+                            <!-- gallery -->
+                            <li>
+                                <a href="{% url 'projects' %}" class="sf-with-ul">Проекты</a><span class="sf-menu-item-mobile-toggler"></span>
+                            </li>
+
+                            <li>
+                                <a href="{%url 'blog'%}" class="sf-with-ul">Блог</a><span class="sf-menu-item-mobile-toggler"></span>
+                            </li>
+                            <!-- eof blog -->
+
+                            <li>
+                                <a href="{%url 'contacts'%}" class="sf-with-ul">Контакты</a><span class="sf-menu-item-mobile-toggler"></span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- eof main nav -->
+                </div>
+                <div class="col-xl-2 col-lg-3 text-lg-left text-xl-right d-none d-lg-block">
+                    <div class="header_phone">
+                        <h6>
+                            <span>{{contacts.head_phone}}</span>
+                        </h6>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" name="search" placeholder="search keyword" class="search-text">
+                    <a href="#" class="search-btn">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- header toggler -->
+        <span class="toggle_menu">
+            <span></span>
+        </span>
+    </header></div>
+</div>
+<span class="toggle_menu_side header-slide">
+    <span></span>
+</span>
+<div id="canvas">
+	<div id="box_wrapper">

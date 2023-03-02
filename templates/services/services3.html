@@ -1,0 +1,98 @@
+{%extends 'base/base.html'%}
+{%block content%}
+{%include 'base/page_head.html'%}
+			<section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1>Services 3</h1>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="./">Home</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="#">Pages</a>
+								</li>
+								<li class="breadcrumb-item active">
+									Services 3
+								</li>
+							</ol>
+							<div class="divider-15 d-none d-xl-block"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="ls s-pt-50 s-pb-30 s-pb-lg-75 c-gutter-30 c-mb-30 service-item">
+				<div class="d-none d-lg-block divider-65"></div>
+				<div class="container">
+					<div class="row">
+						{%for serv3 in service3%}
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="vertical-item text-center">
+								<div class="item-media">
+									<img src="images/img_1.jpg" alt="Photo">
+									<a title="" href="service-single1.html"></a>
+								</div>
+								<div class="item-content hero-bg">
+									<h6>
+										<a href="service-single1.html">{{serv3.name}}</a>
+									</h6>
+
+									<p>
+										{{serv3.about}}
+									</p>
+									<a href="service-single1.html" class="btn-link">Read more</a>
+								</div>
+							</div>
+						</div>
+						{%endfor%}
+					</div>
+				</div>
+				<div class="d-none d-lg-block divider-15"></div>
+			</section>
+
+			<section class="ls s-pt-50 s-pt-lg-60 s-pb-130 ls ms">
+				<div class="divider-65 d-none d-lg-block"></div>
+				<div class="container">
+					<div class="row c-mb-30">
+                        {%for plan in plans_of%}
+						<div class="col-lg-4 col-md-12">
+
+							<div class="pricing-plan {{plan.color}} ls">
+								<div class="plan-name">
+									<h3>
+	                                    {{plan.name}}
+									</h3>
+								</div>
+								<div class="price-wrap color-darkgrey">
+									<span class="plan-sign">{{plan.curs}}</span>
+									<span class="plan-price">{{plan.summ}}</span>
+									<span class="plan-decimals"></span>
+								</div>
+								<div class="plan-description color-darkgrey">
+									{{plan.category}}
+								</div>
+								<div class="plan-features">
+									<ul class="list-bordered">
+										{%for incls in includes%}
+										{%if incls.plans.id == plan.id%}
+										<li>{{incls.include}}</li>
+										{%endif%}
+										{%endfor%}
+									</ul>
+								</div>
+								<div class="plan-button">
+									<a href="#" class="btn inverse-{{plan.color}}">get started</a>
+								</div>
+							</div>
+							<div class="divider-15 d-none d-sm-block d-md-none"></div>
+						</div>
+						{%endfor%}
+					</div>
+				</div>
+				<div class="divider-60 d-none d-lg-block"></div>
+			</section>
+{%include 'base/footer.html'%}
+{%endblock content%}

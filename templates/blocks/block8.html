@@ -1,0 +1,47 @@
+
+<section class="s-pt-130 s-pb-15 s-pb-md-50 s-pt-xl-100 s-pb-lg-30 overflow-visible s-parallax testimonials-sliders main-testimonials ds" id="testimonials">
+    <div class="corner ls ms"></div>
+    <div class="container">
+        <div class="row c-mt-30 c-mt-md-0">
+            <div class="divider-20"></div>
+            <div class="text-center img-wrap line col-md-12">
+                <img src="img/vertical_line2.png" alt="">
+            </div>
+            <div class="divider-40 d-none d-md-block"></div>
+            <div class="col-md-12">
+                <div class="owl-carousel" data-autoplay="false" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-nav="false" data-dots="true" id="quote">
+                    {%for revs in reviews%}
+                    <div class="quote-item">
+                        <div class="quote-image">
+                            <img src="" alt="Photo">
+                        </div>
+                        <p class="small-text author-job">
+                            {{revs.job}}
+                        </p>
+                        <h5>
+                            <a href="#">{{revs.name}}</a>
+                        </h5>
+                        <p>
+                            <em class="big">
+                                {{revs.text}}
+                            </em>
+                        </p>
+                    </div>
+                    {%endfor%}
+                </div>
+                <!-- .testimonials-slider -->
+            </div>
+            <div class="divider-55 d-none d-md-block"></div>
+            <div class="text-center img-wrap col-md-12">
+                <img src="img/vertical_line2.png" alt="">
+            </div>
+            <div class="divider-10 d-none d-md-block"></div>
+        </div>
+    </div>
+    <div class="testimonials-btn text-center">
+        <a href="#quote" class="btn-maincolor">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+    <div class="corner corner-light"></div>
+</section>

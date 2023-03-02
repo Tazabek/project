@@ -1,0 +1,41 @@
+
+<section class="s-pt-75 s-pt-xl-50 gallery-carousel main-gallery container-px-0" id="gallery">
+    <div class="container-fluid">
+        <div class="img-wrap text-center">
+            <img src="img/vertical_line.png" alt="">
+            <div class="divider-40 d-block d-sm-none"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-xl-5">
+                        <div class="filters gallery-filters small-text text-lg-right">
+                            <a href="#" data-filter="*" class="active selected">All</a>
+                            {% for ports in portfols %}
+                            <a href="" data-filter=".{{ports.name}}">{{ports.name}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel gallery-owl-nav" data-autoplay="false" data-responsive-lg="5" data-responsive-md="3" data-responsive-sm="3" data-responsive-xs="2" data-nav="true" data-dots="false" data-filters=".gallery-filters" data-margin="0" data-loop="true">
+                    {% for ports in portfols %}
+                    <div class="vertical-item item-gallery content-absolute text-center ds web-design">
+                        <div class="item-media">
+                            <img src="{{ports.foto.url}}" alt="">
+                            <div class="media-links">
+
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h6>
+                                <a class="small-text" href="gallery-regular.html">{{ports.name}}</a>
+                            </h6>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- .owl-carousel-->
+            </div>
+        </div>
+    </div>
+</section>

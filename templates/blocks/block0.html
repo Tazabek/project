@@ -1,0 +1,140 @@
+
+<!-- search modal -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="widget widget_search">
+        <form method="get" class="searchform search-form" action="/">
+            <div class="form-group">
+                <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+            </div>
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </div>
+</div>
+<section class="page_slider main_slider">
+    <div class="flexslider" data-nav="true" data-dots="false">
+        <ul class="slides">
+            <li class="ds text-center slide1" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+                <span class="flexslider-overlay"></span>
+                <span class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/UBufeh1yv2c?feature=oembed&amp;;showinfo=0&amp;;autoplay=1&amp;;controls=0&amp;;mute=1&amp;;loop=1&amp;;playlist=UBufeh1yv2c" allowfullscreen=""></iframe>
+                </span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 itro_slider">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="fadeIn" style="visibility: hidden;">
+                                        <p class="text-uppercase intro_after_featured_word">{{slides.s1word1}}</p>
+                                    </div>
+
+                                    <div class="intro_layer" data-animation="slideRight" style="visibility: hidden;">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            {{slides.s1word2}}
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn" style="visibility: hidden;">
+                                        <h3 class="intro_before_featured_word">
+                                            <span class="color-main2">{{slides.s1word3}}</span>,
+                                            <span class="color-main3">{{slides.s1word4}}</span> &amp;
+                                            <span class="color-main4">{{slides.s1word5}}</span>
+                                        </h3>
+                                    </div>
+                                    <div class="intro_layer page-bottom" data-animation="expandUp" style="visibility: hidden;">
+                                        <a class="btn btn-maincolor" href="about.html">Начать</a>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+            <li class="ds text-center slide2" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+                <span class="flexslider-overlay"></span>
+                <img src="/static/images/slide_02.jpg" alt="" draggable="false">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 itro_slider">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="fadeIn" style="visibility: hidden;">
+                                        <h3 class="text-lowercase intro_before_featured_word">
+                                            {{slides.s2word1}}
+                                        </h3>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn" style="visibility: hidden;">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            {{slides.s2word2}}
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="pullDown" style="visibility: hidden;">
+                                        <p class="text-uppercase intro_after_featured_word">{{slides.s2word3}}</p>
+                                    </div>
+                                    <div class="intro_layer page-bottom" data-animation="expandUp" style="visibility: hidden;">
+                                        <a class="btn btn-maincolor" href="about.html">Начать</a>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+            <li class="ds text-center slide3 flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+                <img src="/static/images/slide_03.jpg" alt="" draggable="false">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 itro_slider">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer animated fadeInRight" data-animation="fadeInRight" style="visibility: hidden;">
+                                        <h2 class="text-uppercase intro_featured_word light">
+                                            {{slides.s3word1}}
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer animated fadeIn" data-animation="fadeIn" style="visibility: hidden;">
+                                        <h2 class="text-uppercase intro_featured_word bold">
+                                            {{slides.s3word2}}
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer animated fadeIn" data-animation="fadeIn" style="visibility: hidden;">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            {{slides.s3word3}}
+                                        </h2>
+                                    </div>
+
+                                    <div class="intro_layer page-bottom animated expandUp" data-animation="expandUp" style="visibility: hidden;">
+                                        <a class="btn btn-maincolor" href="about.html">Начать</a>
+                                        <a class="btn btn-outline-maincolor" href="#">our folio</a>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+
+        </ul>
+    <ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"></a></li><li class="flex-nav-next"><a class="flex-next" href="#"></a></li></ul><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"></a></li><li class="flex-nav-next"><a class="flex-next" href="#"></a></li></ul><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"></a></li><li class="flex-nav-next"><a class="flex-next" href="#"></a></li></ul><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"></a></li><li class="flex-nav-next"><a class="flex-next" href="#"></a></li></ul><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"></a></li><li class="flex-nav-next"><a class="flex-next" href="#"></a></li></ul><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"></a></li><li class="flex-nav-next"><a class="flex-next" href="#"></a></li></ul><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#"></a></li><li class="flex-nav-next"><a class="flex-next" href="#"></a></li></ul></div>
+    <!-- eof flexslider -->
+    <div class="flexslider-bottom d-none d-xl-block">
+        <a href="#about" class="mouse-button animated floating"></a>
+    </div>
+</section>
+<div class="divider-10 d-block d-sm-none"></div>

@@ -1,0 +1,30 @@
+
+<section class="s-pt-30 s-pb-3 service-item2 ls animate" id="services" data-animation="fadeInUp">
+    <div class="container">
+        <div class="row c-mb-50 c-mb-md-60">
+            <div class="d-none d-lg-block divider-20"></div>
+            {%for cats in category%}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="vertical-item text-center">
+                    <div class="item-media">
+                        <img src="" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h6>
+                            <a href="service-single1.html">{{cats.name}}</a>
+                        </h6>
+
+                        <p>
+                            {{cats.about}}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+        <div class="pink-line text-center">
+            <img src="img/pink_line_big.png" alt="">
+        </div>
+    </div>
+</section>

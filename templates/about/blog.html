@@ -1,0 +1,181 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{%include 'base/page_head.html'%}
+
+			<section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1>Блог</h1>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="./">Главная</a>
+								</li>
+								<li class="breadcrumb-item active">
+									Блог
+								</li>
+							</ol>
+							<div class="divider-15 d-none d-xl-block"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="ls s-pt-50 s-pb-50 s-pt-lg-50 s-pb-lg-100 blog1">
+				<div class="container">
+					<div class="d-none d-lg-block divider-65"></div>
+
+					<div class="row c-mb-30 c-mb-xl-60">
+						<div class="col-lg-12 blog-featured-posts">
+							<div class="row justify-content-center">
+                                {% for recents in posts_recent %}
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item text-center content-padding padding-small ls ms post type-post status-publish format-standard has-post-thumbnail blog-featured-posts">
+										<div class="item-media post-thumbnail">
+											<a href="post1.html">
+												<img src="{{recents.img.url}}" alt="">
+											</a>
+										</div>
+										<!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<div class="entry-meta">
+													<span class="screen-reader-text">Posted on</span>
+													<a href="#" rel="bookmark">
+														<time class="entry-date published updated" datetime="2018-03-11T15:15:12+00:00">{{recents.date}}
+														</time>
+													</a>
+												</div>
+												<!-- .entry-meta -->
+												<h6 class="entry-title">
+													<a href="post1.html" rel="bookmark">
+														{{recents.name}}
+													</a>
+												</h6>
+											</header>
+											<!-- .entry-header -->
+
+											<div class="entry-content">
+												<p>{{recents.desc | safe}}</p>
+											</div>
+											<!-- .entry-content -->
+										</div>
+										<!-- .item-content -->
+									</article>
+									<!-- #post-## -->
+								</div>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+
+					<div class="row c-gutter-60">
+
+						<main class="col-lg-7 col-xl-8">
+                            {% for others in posts_others %}
+							<article class="text-md-left vertical-item ls post type-post status-publish format-standard has-post-thumbnail sticky">
+								<div class="data-thumbnail ds text-center">
+									<a href="#">
+										<h4 class="data">
+											{{others.date|date:'d'}}
+										</h4>
+										<p>
+											{{others.date|date:'M'}}
+										</p>
+									</a>
+								</div>
+								<div class="item-media post-thumbnail">
+									<a href="post1.html">
+										<img src="{{others.img.url}}" alt="">
+									</a>
+								</div>
+								<!-- .post-thumbnail -->
+								<div class="item-content">
+									<header class="entry-header">
+										<h3 class="entry-title">
+											<a href="post1.html" rel="bookmark">
+											  {{others.name}}
+											</a>
+										</h3>
+									</header>
+									<div class="entry-content">
+										<p>
+											{{others.desc | safe}}
+										</p>
+									</div>
+									<!-- .entry-content -->
+								</div>
+								<!-- .item-content -->
+							</article>
+                            {% endfor %}
+
+
+							<nav class="navigation pagination" role="navigation">
+								<h2 class="screen-reader-text">Posts navigation</h2>
+								<div class="nav-links">
+									<a class="prev page-numbers" href="blog-1.html">
+										<i class="fa fa-chevron-left"></i>
+										<span class="screen-reader-text">Previous page</span>
+									</a>
+									<a class="page-numbers" href="blog-1.html">
+										<span class="meta-nav screen-reader-text">Page </span>
+										1
+									</a>
+									<span class="page-numbers current">
+										<span class="meta-nav screen-reader-text">Page </span>
+										2
+									</span>
+									<a class="page-numbers" href="blog-1.html">
+										<span class="meta-nav screen-reader-text">Page </span>
+										3
+									</a>
+									<a class="next page-numbers" href="blog-1.html">
+										<span class="screen-reader-text">Next page</span>
+										<i class="fa fa-chevron-right"></i>
+									</a>
+								</div>
+							</nav>
+						</main>
+
+						<aside class="col-lg-5 col-xl-4">
+							<div class="widget widget_search ds texture-ds">
+								<h6>Search</h6>
+								<form role="search" method="get" class="search-form" action="/">
+									<label for="search-form-widget">
+										<span class="screen-reader-text">Search for:</span>
+									</label>
+									<input type="search" id="search-form-widget" class="text-left search-field form-control" placeholder="Search Keyword" name="Search Keyword">
+									<button type="submit" class="search-submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+
+
+
+							<div class="widget widget_calendar">
+
+								<div id="calendar_wrap" class="calendar_wrap">
+									<iframe src="https://calendar.yandex.ru/week?embed&layer_ids=12345&tz_id=Asia/Yekaterinburg" width="800" height="450" frameborder="0" style="border: 1px solid #eee"></iframe>
+								</div>
+							</div>
+
+
+							<div class="widget widget_flickr">
+
+								<h3 class="widget-title">Instagram</h3>
+								<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-a83128b6-1055-4151-8df0-bfbd6b0aa6cf"></div>
+							</div>
+
+
+						</aside>
+
+						<div class="d-none d-lg-block divider-105"></div>
+					</div>
+
+				</div>
+			</section>
+{%include 'base/footer.html'%}
+{%endblock content %}

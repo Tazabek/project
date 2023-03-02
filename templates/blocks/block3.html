@@ -1,0 +1,35 @@
+
+<section class="s-pt-100 s-pt-lg-130 ds process-part skew_right s-parallax top_white_line_big overflow-visible" id="steps" style="background-position: 50% -13px;">
+    {%for servs in services%}
+    <div class="container">
+        <div class="divider-65"></div>
+        <div class="row align-items-center c-mb-20 c-mb-lg-60">
+            <div class="col-12 col-lg-4">
+                <div class="step-left-part text-right">
+                    <h2 class="step-title">
+                        <span class="color-main">{{servs.number}}</span>{{servs.name}}</h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="step-center-part text-center">
+                    <img src="servs.foto.url" alt="Photo">
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="step-right-part">
+                <p class="step-text">{{servs.about}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+        <div class="divider-10 d-block d-sm-none"></div>
+        <div class="img-wrap text-center">
+            <img src="img/vertical_line2.png" alt="">
+        </div>
+        <div class=" white-button text-center">
+            <a class="btn white-btn" href="#">Начать</a>
+        </div>
+        <div class="divider-30 d-none d-xl-block"></div>
+    </div>
+</section>

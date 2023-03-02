@@ -1,0 +1,54 @@
+{%extends 'base/base.html'%}
+{%block content%}
+{%include 'base/page_head.html'%}
+
+			<section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1>Services 2</h1>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="./">Home</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="#">Pages</a>
+								</li>
+								<li class="breadcrumb-item active">
+									Services 2
+								</li>
+							</ol>
+							<div class="divider-15 d-none d-xl-block"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="ls s-pt-50 s-pb-100 s-pt-md-75 s-pt-lg-50 s-pb-lg-130 c-mb-30 service-item1">
+				<div class="d-none d-lg-block divider-65"></div>
+				<div class="container">
+					<div class="row">
+						{%for serv2 in service2%}
+						<div class="col-md-6 col-sm-12">
+							<div class="icon-box text-center hero-bg">
+								<div class="service-icon">
+									<img src="images/service/service-icon-1.png" alt="Photo">
+								</div>
+								<h6>
+									<a href="service-single1.html">{{serv2.name}}</a>
+								</h6>
+								<p>
+									{{serv2.about}}
+								</p>
+								<a href="service-single1.html" class="btn-link">Read more</a>
+							</div>
+						</div>
+						{%endfor%}
+					</div>
+				</div>
+				<div class="d-none d-lg-block divider-45"></div>
+			</section>
+
+{%include 'base/footer.html'%}
+{%endblock content%}
